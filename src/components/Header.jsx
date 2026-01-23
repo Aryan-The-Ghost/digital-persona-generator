@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const location = useLocation();
@@ -33,6 +34,7 @@ export default function Header() {
           >
             Results
           </Link>
+          <ThemeToggle />
           <Link to="/wizard" className="nav-cta">
             Get Started
           </Link>
