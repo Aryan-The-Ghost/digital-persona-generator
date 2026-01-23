@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./components/Layout";
 
 import Home from "./pages/Home";
@@ -8,14 +9,16 @@ import Results from "./pages/Results";
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/wizard" element={<Wizard />} />
-        <Route path="/results" element={<Results />} />
-        
-      </Routes>
-    </Layout>
+    <ThemeProvider>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wizard" element={<Wizard />} />
+          <Route path="/results" element={<Results />} />
+          
+        </Routes>
+      </Layout>
+    </ThemeProvider>
   );
 }
 
